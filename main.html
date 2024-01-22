@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(248, 200, 220);
+            text-align: center;
+        }
+
+        #question {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        #btnYes, #btnNo {
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function redirectToPage(response) {
+            if (response === 'Yes') {
+                window.location.href ="main2.html";
+            } else {
+                moveButton(); 
+            }
+        }
+
+        function moveButton() {
+            var btnNo = document.getElementById('btnNo');
+            btnNo.style.position = 'absolute';
+            btnNo.style.left = Math.random() * (window.innerWidth - btnNo.offsetWidth) + 'px';
+            btnNo.style.top = Math.random() * (window.innerHeight - btnNo.offsetHeight) + 'px';
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="question">CRUSH MO BA AKO??</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="btnYes" onclick="redirectToPage('Yes')">Yes</button>
+    <button id="btnNo" onclick="redirectToPage('No')">No</button>
+</body>
+</html>
